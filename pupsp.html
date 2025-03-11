@@ -67,6 +67,52 @@
             height: 645px;
         }
 
+          .header {
+               background-color: #4ab6b6;
+               padding: 20px;
+               text-align: center;
+               color: white;
+          }
+          .header h1 {
+               margin: 0;
+               font-size: 35px;
+          }
+          .header h2 {
+               margin: 0;
+               font-size: 25px;
+          }
+          .container {
+               display: flex;
+               justify-content: space-between;
+               align-items: flex-start;
+               gap: 10px;
+          }
+          .content {
+               flex: 1;
+               background-color: #fce5a3;
+               padding: 20px;
+               border-radius: 8px;
+          }
+          table {
+               width: 100%;
+               border-collapse: collapse;
+               background-color: #f4c96d;
+          }
+          th, td {
+               padding: 35px;
+               border: 2px solid #8d6c3f;
+               text-align: left;
+          }
+          th {
+               text-align: center;
+               background-color: #d0913c;
+               color: #3d2a14;
+          }
+          td a {
+               color: #0645AD;
+               text-decoration: none;
+          }
+
         #about {
             background: #f6db92;
         }
@@ -96,15 +142,50 @@
           <p>    Ewan      </p>
      </section>
      
-     <section id="events">
-          <h2>Upcoming Events</h2>
-          <table border="1">
-               <tr>
-                    <th>Date</th>
-                    <th>Event Name</th>
-                    <th>Location</th>
-               </tr>
-          </table>
+     <section id="events" style="background-color: #fce5a3;">
+          <div class="header">
+               <h1>EVENTS CALENDAR</h1>
+               <h2>2025 UPCOMING EVENTS</h2>
+          </div>
+       
+          <div class="container">
+               <!-- Left Side: Content -->
+               <div class="content" style="color: #3d2a14; padding: 50px">
+                    <h2 style="color: #654321; font-size: 35px;">PUPSP Cat Festival: HAYOP MAGMAHAL</h2>
+                    <p><strong>A Week of Love for Cats!</strong></p>
+                    <p>Get ready for a series of exciting events dedicated to our beloved feline friends. Here are the activities of <strong>PUPSP Cat Festival: Hayop Magmahal</strong>—mark your calendars and be part of these meaningful activities!</p>
+                    <p>Don’t miss out on these exciting activities! Join us in making a difference for our furry friends. Kindly see each picture for additional details. See you there!</p>
+               </div>
+       
+               <div class="table-container" style="flex: 25%; color: #3d2a14;">
+                    <table>
+                         <thead>
+                              <tr>
+                                   <th>Event Name</th>
+                                   <th>DATE</th>
+                                   <th>EVENT LINK</th>
+                              </tr>
+                         </thead>
+                         <tbody>
+                              <tr>
+                                   <td>📢 <strong>Claws, Collars, and Chain:</strong> Fundraising Event for the Cats of PUP</td>
+                                   <td>📍 <strong>Feb 18-22</strong> - PUP Lagoon & ITech</td>
+                                   <td><a href="https://www.facebook.com/share/p/1ANdWaPypk/" target="_blank">Event Link</a></td>
+                              </tr>
+                              <tr>
+                                   <td>📢 <strong>Claws, Collars, and Chain:</strong> Fundraising Event for the Cats of PUP</td>
+                                   <td>📍 <strong>Feb 18-22</strong> - PUP Lagoon & ITech</td>
+                                   <td><a href="https://www.facebook.com/share/p/1ANdWaPypk/" target="_blank">Event Link</a></td>
+                              </tr>
+                              <tr>
+                                   <td>📢 <strong>Claws, Collars, and Chain:</strong> Fundraising Event for the Cats of PUP</td>
+                                   <td>📍 <strong>Feb 18-22</strong> - PUP Lagoon & ITech</td>
+                                   <td><a href="https://www.facebook.com/share/p/1ANdWaPypk/" target="_blank">Event Link</a></td>
+                              </tr>
+                         </tbody>
+                    </table>
+               </div>
+           </div>
      </section>
      
      <section id="officers">
