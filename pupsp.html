@@ -5,23 +5,64 @@
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>PUP Sintang Pusa</title>
      <style>
-               
-     </style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: #ecb446;
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.8em;
+            font-style: italic;
+        }
+
+        nav {
+            background: white;
+            display: flex;
+            justify-content: center;
+            padding: 15px;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #34495e;
+            font-weight: 600;
+            margin: 0 20px;
+            transition: 0.3s;
+            padding: 8px 15px;
+            border-radius: 20px;
+        }
+
+        nav a:hover {
+            background: #006051;
+            color: white;
+        }
+
+
+
+    </style>
 
 </head>
-<body>
-     <header>
-          <h1>PUP Sintang Pusa</h1>
-          <img src="higuys.png" alt="Logo">
-          <nav>
-               <ul>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#events">Events</a></li>
-                    <li><a href="#contact">Contact</a></li>
-               </ul>
-          </nav>
-     </header>
-     
+<body id="Home">
+    <header>
+        <h1>For the cats of PUP, we serve</h1>
+        <img src="PusaLogo.png" alt="Logo">
+    </header>
+    
+    <nav>
+        <a href="#Home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#events">Events</a>
+        <a href="#contact">Contact</a>
+    </nav>
      <section id="about">
           <h2>About Us</h2>
           <p>    Ewan      </p>
@@ -52,8 +93,7 @@
                <h3> Vice President: </h3>
                     <li>Clarence</li>
           </ul>
-     </section>
-     
+        </section>
      <footer id="contact">
           <h2>Contact Details</h2>
           <p>lagay here contacts</p>
