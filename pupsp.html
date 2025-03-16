@@ -448,343 +448,150 @@
  
                     /* Paw Print Background Pattern */
 
+/* Events Section */
 /* 🐱 EVENTS SECTION */
-/* 🐾 EVENTS CALENDAR SECTION */
 #events {
-    background-color: #fce5a3; /* Soft pastel yellow */
-    padding: 50px 20px;
-    border-radius: 20px;
-    position: relative;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    border: 5px dashed #ffb677; /* Cute dashed border */
-}
+     background-color: #fffaf0; /* Soft creamy background */
+     padding: 50px 20px;
+     border-radius: 20px;
+     position: relative;
+     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+     overflow: hidden;
+ }
+ 
 
-/* 🎀 Header Styling */
-.header {
-    text-align: center;
-    font-family: 'Poppins', sans-serif;
-    position: relative;
-    margin-bottom: 20px;
-}
+ #events::before {
+     top: 20px;
+     left: 30px;
+     transform: rotate(-15deg);
+ }
+ 
+ #events::after {
+     bottom: 30px;
+     right: 40px;
+     transform: rotate(20deg);
+ }
+ 
+ /* 📢 Stylish Header */
+ .header {
+     text-align: center;
+     font-family: 'Poppins', sans-serif;
+     padding-bottom: 20px;
+     position: relative;
+ }
+ 
+ .header h1 {
+     font-size: 42px;
+     font-weight: 700;
+     text-transform: uppercase;
+     color: #4d3d2c;
+     display: inline-block;
+     padding: 10px 20px;
+     border-radius: 15px;
+     background: #ffda88;
+     box-shadow: 3px 3px 0px #e6b75b;
+     position: relative;
+ }
+ 
 
-/* 🎀 EVENTS CALENDAR Banner */
-.header h1 {
-    font-size: 42px;
-    font-weight: 800;
-    text-transform: uppercase;
-    color: #4d3d2c;
-    display: inline-block;
-    padding: 15px 30px;
-    border-radius: 15px;
-    background: linear-gradient(135deg, #ffda88, #ffb677);
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
-    position: relative;
-    border: 3px solid #ff9e6d;
-}
+ 
+ /* 🏷️ Subheader */
+ .header h2 {
+     font-size: 24px;
+     font-weight: 500;
+     color: #5a4a3b;
+     margin-top: 5px;
+ }
+ 
+ /* 🎀 Event Content */
+ .content {
+     text-align: center;
+     color: #3d2a14;
+     padding: 30px;
+     background: #fff5e1;
+     border-radius: 20px;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+     font-size: 18px;
+     font-weight: 500;
+     position: relative;
+ }
 
-/* 🐱 Paw Prints & Sparkles */
-.header h1::before, .header h1::after {
-    content: "🐾✨";
-    font-size: 28px;
-    position: absolute;
-    color: rgba(255, 115, 75, 0.8);
-}
-
-.header h1::before {
-    left: -50px;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.header h1::after {
-    right: -50px;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-/* 🎀 Cute Divider Below Header */
-.header::after {
-    content: "";
-    display: block;
-    width: 150px;
-    height: 5px;
-    background: #ff9e6d;
-    margin: 15px auto;
-    border-radius: 10px;
-}
-
-/* 🎀 Extra Cute Background Decor */
-#events::before, #events::after {
-    content: "🐾✨🐱";
-    font-size: 40px;
-    position: absolute;
-    opacity: 0.2;
-}
-
-#events::before {
-    left: 15px;
-    top: 10px;
-    transform: rotate(-15deg);
-}
-
-#events::after {
-    right: 15px;
-    bottom: 10px;
-    transform: rotate(15deg);
-}
-
-
-/* 🎀 EVENTS CALENDAR BANNER */
-.events-banner {
-    width: 100%;
-    text-align: center;
-    padding: 25px;
-    background: linear-gradient(135deg, #ffda88, #ffb677);
-    color: #4d3d2c;
-    font-size: 32px;
-    font-weight: 800;
-    font-family: 'Poppins', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    position: relative;
-}
-
-/* 🐱 Paw Print & Star Decorations */
-.events-banner::before,
-.events-banner::after {
-    content: "🐾✨";
-    font-size: 28px;
-    position: absolute;
-    color: rgba(255, 115, 75, 0.8);
-}
-
-.events-banner::before {
-    left: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.events-banner::after {
-    right: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-/* 🎀 2025 UPCOMING EVENTS SUB-BANNER */
-.events-subtitle {
-    width: 90%;
-    margin: 20px auto;
-    text-align: center;
-    background: #fff3e0;
-    padding: 15px;
-    border-radius: 12px;
-    font-size: 24px;
-    font-weight: bold;
-    color: #ff6b6b;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-    position: relative;
-}
-
-/* ✨ Sparkle Effect */
-.events-subtitle::before {
-    content: "✨";
-    font-size: 20px;
-    position: absolute;
-    left: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.events-subtitle::after {
-    content: "✨";
-    font-size: 20px;
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-/* 🐱 Cute Event Intro Styling */
-.event-intro {
-    text-align: center;
-    background: #fffaf0; /* Soft creamy background */
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    position: relative;
-    font-family: 'Poppins', sans-serif;
-    overflow: hidden;
-}
-
-/* 🐾 Cute Paw Print Background */
-.event-intro::before, .event-intro::after {
-    content: "🐾";
-    font-size: 80px;
-    position: absolute;
-    color: rgba(255, 196, 143, 0.3);
-}
-
-.event-intro::before {
-    top: 10px;
-    left: 20px;
-    transform: rotate(-15deg);
-}
-
-.event-intro::after {
-    bottom: 10px;
-    right: 20px;
-    transform: rotate(15deg);
-}
-/* 🐱 Event Section Layout */
-.events-container {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 30px;
-    padding: 40px;
-    background: #fffaf0;
-    border-radius: 20px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    position: relative;
-}
-
-/* 🎀 Left Side: Event Description */
-.event-intro {
-    width: 50%;
-    text-align: left;
-    font-family: 'Poppins', sans-serif;
-    padding: 20px;
-    border-radius: 15px;
-    background: #fff5e1;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    position: relative;
-}
-
-/* 🐾 Cute Paw Print Background */
-.event-intro::before, .event-intro::after {
-    content: "🐾";
-    font-size: 80px;
-    position: absolute;
-    color: rgba(255, 196, 143, 0.3);
-}
-
-.event-intro::before {
-    top: -10px;
-    left: -10px;
-    transform: rotate(-20deg);
-}
-
-.event-intro::after {
-    bottom: -10px;
-    right: -10px;
-    transform: rotate(15deg);
-}
-
-/* ✨ Highlighted Event Title */
-.event-intro h1 {
-    font-size: 38px;
-    font-weight: 800;
-    color: #4d3d2c;
-    padding-bottom: 10px;
-}
-
-.event-intro p {
-    font-size: 18px;
-    color: #5a4a3b;
-    font-weight: 500;
-    line-height: 1.6;
-    padding-bottom: 10px;
-}
-
-/* 🐱 Right Side: Table Styling */
-.table-container {
-    width: 50%;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    background: #fffdf7;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-}
-
-/* 📅 Table Headers */
-th {
-    background: #ffda88;
-    color: #4d3d2c;
-    font-weight: bold;
-    padding: 16px;
-    text-align: center;
-    font-size: 18px;
-    border-radius: 15px 15px 0 0;
-}
-
-/* 🐾 Event Rows */
-td {
-    padding: 16px;
-    text-align: left;
-    color: #5a4a3b;
-    font-size: 16px;
-    border-bottom: 3px dotted #ffd699;
-}
-
-/* Adjust column widths for better spacing */
-td:first-child {
-    width: 40%;
-} /* Event Name */
-td:nth-child(2) {
-    width: 30%;
-    text-align: center;
-} /* Date */
-td:nth-child(3) {
-    width: 30%;
-    text-align: center;
-} /* Link */
-
-/* 📍 Event Links */
-td a {
-    color: #ff9e6d;
-    font-weight: bold;
-    text-decoration: none;
-    transition: color 0.3s ease-in-out;
-    display: inline-block;
-    padding: 8px 12px;
-    border-radius: 10px;
-    background: #ffecd4;
-    box-shadow: 2px 2px 0px #e6b75b;
-}
-
-td a:hover {
-    color: #ff6b6b;
-    text-decoration: underline;
-    background: #ffda88;
-}
-
-/* ✨ Hover Effect */
-tbody tr:hover {
-    background: rgba(255, 236, 179, 0.3);
-    transition: background 0.3s ease-in-out;
-}
-
-/* 🎀 Stylish Dividers */
-tbody tr:nth-child(even) {
-    background-color: #fff8e6;
-}
-
-
-.table-container::after {
-    content: "🐱🐾🐱";
-    font-size: 30px;
-    position: absolute;
-    bottom: -10px;
-    right: 10%;
-    opacity: 0.3;
-}
+ 
+ .content h2 {
+     color: #654321;
+     font-size: 38px;
+     font-weight: bold;
+ }
+ 
+ /* 📋 Cute Table */
+ .table-container {
+     display: flex;
+     justify-content: center;
+     margin-top: 20px;
+ }
+ 
+ table {
+     width: 95%;
+     max-width: 850px;
+     border-collapse: collapse;
+     background: #fffdf7;
+     border-radius: 15px;
+     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+     overflow: hidden;
+ }
+ 
+ /* 🐾 Soft Rounded Header */
+ th {
+     background: #ffda88;
+     color: #4d3d2c;
+     font-weight: bold;
+     padding: 16px;
+     text-align: center;
+     font-size: 18px;
+     border-radius: 15px 15px 0 0;
+ }
+ 
+ /* 🐱 Event Rows with Cute Borders */
+ td {
+     padding: 16px;
+     text-align: left;
+     color: #5a4a3b;
+     font-size: 16px;
+     position: relative;
+     border-bottom: 3px dotted #ffd699;
+ }
+ 
+ /* 🐾 Cute Paw Print Next to Event Names */
+ td:first-child::before {
+     content: "🐾 ";
+     font-size: 20px;
+     margin-right: 5px;
+ }
+ 
+ /* 📍 Event Links */
+ td a {
+     color: #ff9e6d;
+     font-weight: bold;
+     text-decoration: none;
+     transition: color 0.3s ease-in-out;
+ }
+ 
+ td a:hover {
+     color: #ff6b6b;
+     text-decoration: underline;
+ }
+ 
+ /* ✨ Hover Effect */
+ tbody tr:hover {
+     background: rgba(255, 236, 179, 0.3);
+     transition: background 0.3s ease-in-out;
+ }
+ 
+ /* 🎀 Stylish Dividers */
+ tbody tr:nth-child(even) {
+     background-color: #fff8e6;
+ }
+ 
 
  
 
@@ -1001,46 +808,42 @@ tbody tr:nth-child(even) {
      <section id="events" style="background-color: #fce5a3;">
           <div class="header">
                <h1>EVENTS CALENDAR</h1>
+               <h2>2025 UPCOMING EVENTS</h2>
           </div>
-       <!-- 🎀 Cute Banner for Events Calendar -->
-
-<!-- 🐱 Sub-Banner for 2025 Upcoming Events -->
-<div class="events-subtitle">2025 UPCOMING EVENTS</div>
-
-          <div class="events-container">
-            <!-- 🐱 Left: Event Details -->
-            <div class="event-intro">
-                <h1>PUPSP Cat Festival: HAYOP MAGMAHAL</h1>
-                <p>A Week of Love for Cats!</p>
-                <p>Get ready for a series of exciting events dedicated to our beloved feline friends. Here are the activities of PUPSP Cat Festival: <span>Hayop Magmahal</span>—mark your calendars and be part of these meaningful activities!</p>
-                <p>Don’t miss out on these exciting activities! Join us in making a difference for our furry friends. Kindly see each picture for additional details. See you there! 🐱🎀</p>
-            </div>
-        
+       
+          <div class="container">
+               <!-- Left Side: Content -->
+               <div class="content" style="color: #3d2a14; padding: 50px">
+                    <h2 style="color: #654321; font-size: 35px;">PUPSP Cat Festival: HAYOP MAGMAHAL</h2>
+                    <p><strong>A Week of Love for Cats!</strong></p>
+                    <p>Get ready for a series of exciting events dedicated to our beloved feline friends. Here are the activities of <strong>PUPSP Cat Festival: Hayop Magmahal</strong>—mark your calendars and be part of these meaningful activities!</p>
+                    <p>Don’t miss out on these exciting activities! Join us in making a difference for our furry friends. Kindly see each picture for additional details. See you there!</p>
+               </div>
        
                <div class="table-container" style="flex: 25%; color: #3d2a14;">
                     <table>
                          <thead>
                               <tr>
                                    <th>Event Name</th>
-                                   <th>Date</th>
-                                   <th>Event Link</th>
+                                   <th>DATE</th>
+                                   <th>EVENT LINK</th>
                               </tr>
                          </thead>
                          <tbody>
                               <tr>
                                    <td>📢 <strong>Claws, Collars, and Chain:</strong> Fundraising Event for the Cats of PUP</td>
-                                   <td>📍 <strong>Mar 18</strong> - PUP Lagoon & ITech</td>
+                                   <td>📍 <strong>Feb 18-22</strong> - PUP Lagoon & ITech</td>
                                    <td><a href="https://www.facebook.com/share/p/1ANdWaPypk/" target="_blank">Event Link</a></td>
                               </tr>
                               <tr>
-                                   <td>📢 <strong>Sintang Pusa of the Month:</strong>  Online Adoption Drive</td>
-                                   <td>📍 <strong>Mar 22</strong> - PUPSP FB Page</td>
+                                   <td>📢 <strong>Claws, Collars, and Chain:</strong> Fundraising Event for the Cats of PUP</td>
+                                   <td>📍 <strong>Feb 18-22</strong> - PUP Lagoon & ITech</td>
                                    <td><a href="https://www.facebook.com/share/p/1ANdWaPypk/" target="_blank">Event Link</a></td>
                               </tr>
                               <tr>
-                                   <td>🎤 <strong> PUPSP Hayop Magmahal Seminar:</strong> Fundraising Event for the Cats of PUP</td>
-                                   <td>📍 <strong>Mar 23</strong> - ITech AVR</td>
-                                   <td><a href="https://www.facebook.com/PUPSintangPusa/posts/pfbid0NwVjhTGp3ShPGqL8p4wmU2BovQZgvdqs6BmogEEH4S84AX2xHbKmzgjNq4AonGARl/" target="_blank">Event Link</a></td>
+                                   <td>📢 <strong>Claws, Collars, and Chain:</strong> Fundraising Event for the Cats of PUP</td>
+                                   <td>📍 <strong>Feb 18-22</strong> - PUP Lagoon & ITech</td>
+                                   <td><a href="https://www.facebook.com/share/p/1ANdWaPypk/" target="_blank">Event Link</a></td>
                               </tr>
                          </tbody>
                     </table>
