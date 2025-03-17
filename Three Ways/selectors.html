@@ -3,24 +3,244 @@
 <head>
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Inline</title>
-     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-     <link rel="stylesheet" href="3waysStyle.css">
+     <title>Selectors</title>
+     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+     <style>
+          * {
+               margin: 0;
+               padding: 0;
+               box-sizing: border-box;
+               font-family: 'Poppins', sans-serif;
+          }
+          .hero{
+               height: 200px;
+               background-size: cover;
+               background-position: center;
+               background-repeat: no-repeat;
+               border-radius: 5px;
+          }
+          nav {
+               width: 100%;
+               padding: 30px;
+               display: flex;
+               justify-content: space-between;
+               align-items: center;
+               background-color: black;
+               position: relative;
+               top: 0;
+               left: 0;
+               z-index: 2;
+          }
+          .logo{
+               color:#fff;
+               font-size: 30px;
+               font-weight: bold;
+          }
+          .nav-links{
+               display: flex;
+               gap:30px;
+          }
+          .nav-links a{
+               color: #fff;
+               text-decoration: none;
+               transition: 0.3s;
+               font-size: 20px;
+          }
+          .nav-links a:hover{
+               color:#ccc;
+          }
+
+
+          body {
+               padding: 20px;
+               background: #f5f5f5;
+          }
+
+          header {
+               text-align: center;
+               margin-bottom: 20px;
+          }
+
+          main {
+               width: 100%;
+               max-width: 1300px;
+               margin: 10px auto;
+               padding: 20px;
+               background: white;
+               border-radius: 10px;
+               box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+               text-align: center;
+          }
+          article {
+               border: 1px solid #ccc;
+               padding: 10px;
+               margin-bottom: 20px;
+               border-radius: 5px;
+               background: #f9f9f9;
+          }
+
+          pre {
+               background: #eee;
+               padding: 10px;
+               border-radius: 5px;
+               font-size: 14px;
+          }
+
+          /* Universal Selector */
+          * {
+               color: #333;
+          }
+
+          /* Element Selector */
+          h2 {
+               color: blue;
+          }
+
+          p {
+               font-size: 18px;
+          }
+
+          /* ID Selector */
+          #main-title {
+               background: yellow;
+               padding: 5px;
+               display: inline-block;
+          }
+
+          /* Class Selector */
+          .highlight {
+               background: lightgreen;
+               padding: 5px;
+               border-radius: 5px;
+          }
+
+          /* Grouping Selector */
+          h2, h3, h4 {
+               font-family: Arial, sans-serif;
+          }
+
+          /* Descendant Selector */
+          section p {
+               color: green;
+          }
+
+          /* Child Selector */
+          section > p {
+               font-weight: bold;
+          }
+
+          /* Adjacent Sibling Selector */
+          h2 + p {
+               color: red;
+          }
+
+          /* General Sibling Selector */
+          h2 ~ p {
+               text-decoration: underline;
+          }
+
+          /* Attribute Selector */
+          input[type="text"] {
+               border: 2px solid blue;
+               padding: 5px;
+          }
+     </style>
 </head>
 <body>
-     <div class = "hero">
+     <div class="hero">
           <nav>
-               <div class = "logo">Selectors</div>
+               <div class="logo">Selectors</div>
                <div class="nav-links">
-                    <a href="internal.html">Internal</a>
-                    <a href="inline.html">Inline</a>
+                    <a href="Internal.html">Internal</a>
                     <a href="external.html">External</a>
+                    <a href="inline.html">Inline</a>
                     <a href="selectors.html">Selectors</a>
-                </div>
+               </div>
           </nav>
-          <div class = "hero-content">
-          </div>
-     </div>
-</body>
+          <main>
+               <h1>SELECTORS</h1>
+               <!-- Universal Selector -->
+               <article>
+                    <h3>Universal Selector (*)</h3>
+                    <pre>* { color: #333; }</pre>
+                    <h1>UNIVERSAL</h1>
+                    <p>This text is affected by the universal selector.</p>
+                    <ul>
+                         <li>This list is affected by the universal selector.</li>
+                         <li>So is this one.</li>
+                         <li>And this one.</li>
+                    </ul>
+               </article>
      
-     </html>
+               <!-- Element Selector -->
+               <article>
+                    <h3>Element Selector (h2)</h3>
+                    <pre>h2 { color: blue; }</pre>
+                    <h2>This heading is blue.</h2>
+                    <h1>This is not affected because of different hierarchy</h1>
+               </article>
+     
+               <!-- ID Selector -->
+               <article>
+                    <h3>ID Selector (#main-title)</h3>
+                    <pre>#main-title { background: yellow; }</pre>
+                    <h2 id="main-title">This heading has a yellow background.</h2>
+               </article>
+     
+               <!-- Class Selector -->
+               <article>
+                    <h3>Class Selector (.highlight)</h3>
+                    <pre>.highlight { background: lightgreen; }</pre>
+                    <p class="highlight">This paragraph has a green background.</p>
+               </article>
+     
+               <!-- Descendant Selector -->
+               <article>
+                    <h3>Descendant Selector (section p)</h3>
+                    <pre>section p { color: green; }</pre>
+                    <section>
+                         <p>This paragraph inside a section is green.</p>
+                    </section>
+               </article>
+     
+               <!-- Child Selector -->
+               <article>
+                    <h3>Child Selector (section > p)</h3>
+                    <pre>section > p { font-weight: bold; }</pre>
+                    <section>
+                         <p>This direct child paragraph is bold.</p>
+                         <aside>
+                              <p>This nested paragraph is NOT affected.</p>
+                         </aside>
+                    </section>
+               </article>
+     
+               <!-- Adjacent Sibling Selector -->
+               <article>
+                    <h3>Adjacent Sibling Selector (h2 + p)</h3>
+                    <pre>h2 + p { color: red; }</pre>
+                    <h2>Heading</h2>
+                    <p>This paragraph right after h2 is red.</p>
+                    <p>This paragraph is NOT affected.</p>
+               </article>
+     
+               <!-- General Sibling Selector -->
+               <article>
+                    <h3>General Sibling Selector (h2 ~ p)</h3>
+                    <pre>h2 ~ p { text-decoration: underline; }</pre>
+                    <h2>Heading</h2>
+                    <p>This paragraph after h2 is underlined.</p>
+                    <p>This one is also underlined.</p>
+               </article>
+     
+               <!-- Attribute Selector -->
+               <article>
+                    <h3>Attribute Selector (input[type="text"])</h3>
+                    <pre>input[type="text"] { border: 2px solid blue; }</pre>
+                    <input type="text" placeholder="This input has a blue border">
+               </article>
+          </main>
+     </div>
+     
+</body>
+</html>
