@@ -3,25 +3,154 @@
 <head>
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Box Components</title>
-     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-     <link rel="stylesheet" href="external.css">
+     <title>Internal</title>
+     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+     <style>
+          *{
+               margin: 0;
+               padding: 0;
+               box-sizing: border-box;
+               font-family: 'Poppins', sans-serif;
+          }
+
+          .hero{
+               height: 100vh;
+               background-size: cover;
+               background-position: center;
+               background-repeat: no-repeat;
+               border-radius: 15px;
+               padding: 30px 40px;
+          }
+
+          nav {
+               width: 100%;
+               padding: 25px 60px;
+               display: flex;
+               justify-content: space-between;
+               align-items: center;
+               background-color: black;
+               position: relative;
+               top: 0;
+               left: 0;
+               z-index: 2;
+               border-radius: 18px;
+               box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+               margin-bottom: 40px;
+               border: 1px solid rgba(255, 255, 255, 0.1);
+          }
+
+          .logo{
+               color: #fff;
+               font-size: 32px;
+               font-weight: bold;
+               letter-spacing: 1px;
+               padding: 8px 16px;
+               border-left: 4px solid #fff;
+               margin-left: 10px;
+          }
+
+          .nav-links{
+               display: flex;
+               gap: 45px;
+               margin-right: 10px;
+          }
+
+          .nav-links a{
+               color: #fff;
+               text-decoration: none;
+               transition: 0.3s;
+               font-size: 20px;
+               padding: 12px 20px;
+               border-radius: 10px;
+               border: 1px solid transparent;
+          }
+
+          .nav-links a:hover{
+               color:#fff;
+               background-color: rgba(255, 255, 255, 0.15);
+               border-radius: 10px;
+               border: 1px solid rgba(255, 255, 255, 0.3);
+               box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+          }
+
+          main {
+               width: 90%;
+               max-width: 1200px;
+               margin: 40px auto;
+               background: rgb(185, 184, 184);
+               padding: 60px 50px;
+               border-radius: 25px;
+               box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+               text-align: center;
+               border: 1px solid rgba(255, 255, 255, 0.2);
+          }
+
+          .main-content h1{
+               color: #000;
+               font-size: 3em;
+               margin: 0 auto 45px;
+               padding: 25px 40px;
+               border-bottom: 4px solid rgba(0, 0, 0, 0.2);
+               border-top: 4px solid rgba(0, 0, 0, 0.2);
+               width: 80%;
+          }
+
+          .main-content button{
+               padding: 20px 50px;
+               font-size: 1.2em;
+               color: #fff;
+               background-color: #000;
+               cursor: pointer;
+               transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+               border-radius: 30px;
+               border: none;
+               margin-top: 30px;
+               box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+          }
+
+          .main-content button:hover{
+               background-color: #333;
+               box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+          }
+
+          .image-container{
+               margin: 40px 20px 10px;
+               display: flex;
+               justify-content: center;
+               padding: 20px 0;
+          }
+
+          .image-container img{
+               max-width: 35%;
+               height: auto;
+               border-radius: 15px;
+               box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.25);
+               border: 5px solid #fff;
+               margin: 0 auto;
+          }
+     </style>
 </head>
 <body>
-     <div class = "hero">
+     <div class="hero">
           <nav>
-               <div class = "logo">Box Components</div>
+               <div class="logo">Internal</div>
                <div class="nav-links">
-                    <a href="internal.html">Internal</a>
+                    <a href="Internal.html">Internal</a>
                     <a href="external.html">External</a>
                     <a href="inline.html">Inline</a>
                     <a href="boxcomponents.html">Box Components</a>
                     <a href="selectors.html">Selectors</a>
-                </div>
+               </div>
           </nav>
-          <div class = "hero-content">
-          </div>
+          <main>
+               <div class="main-content">
+                    <h1>Internal CSS Style</h1>
+                    <button>Hover Me</button>
+                    <div class="image-container">
+                         <img src="images/InternalSS.png" alt="Image">
+                    </div>
+               </div>
+          </main>
      </div>
 </body>
-     
-     </html>
+</html>
