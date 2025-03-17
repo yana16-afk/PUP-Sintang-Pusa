@@ -9,7 +9,7 @@
 <body style="font-family: 'Poppins', sans-serif; margin: 0; padding: 0; box-sizing: border-box; background-color: #f4f4f4;">
 
     <!-- Navbar (Fixed at the top) -->
-    <nav style="width: 100%; padding: 30px; display: flex; justify-content: space-between; align-items: center; background-color: black; 
+    <nav style="width: 98%; padding: 30px; display: flex; justify-content: space-between; align-items: center; background-color: black; 
                 position: fixed; top: 0; left: 0; z-index: 2;">
         <div style="color: #fff; font-size: 30px; font-weight: bold;">Inline</div>
         <div style="display: flex; gap: 30px;">
@@ -21,28 +21,32 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <div style="height: 50vh; display: flex; flex-direction: column; align-items: center; justify-content: center;
-                text-align: center; background: linear-gradient(135deg, #f8f8f8, #e6e6e6); border-radius: 15px;
-                padding: 50px; box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.1); border: 8px solid #ccc;">
-        <h1 style="font-size: 45px; font-weight: bold; color: #333; text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.15);
-                   padding-bottom: 5px; border-bottom: 4px dotted #888;">Inline CSS Style</h1>
-    </div>
+    <!-- Inline CSS Showcase Section -->
+    <section style=" width: 90%; max-width: 1300px; margin: 200px auto; background: linear-gradient(135deg, #afafaf, #e7e7e7);
+    padding: 80px 50px; border-radius: 15px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+    text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+        
+        <!-- Title -->
+        <h1 style="font-size: 45px; font-weight: bold; color: #000000;
+                   padding-bottom: 10px; border-bottom: px solid #000000;">
+            Inline CSS Style
+        </h1>
 
-    <!-- Main Content -->
-    <main style="width: 100%; max-width: 1300px; margin: 10px auto; background: rgb(185, 184, 184);
-                 padding: 200px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); text-align: center;">
-        <button style="padding: 15px 30px; font-size: 1em; color: #fff; background-color: #000; border: 2px;
-                       cursor: pointer; transition: background-color 0.3s, transform 0.3s; border-radius: 20px;"
+        <!-- Button -->
+        <button style="margin-top: 20px; padding: 15px 30px; font-size: 1em; color: #fff; background-color: #000;
+                       border: 2px; cursor: pointer; transition: background-color 0.3s, transform 0.3s; 
+                       border-radius: 20px;"
                 onmouseover="this.style.backgroundColor='#767171'; this.style.transform='scale(1)';"
                 onmouseout="this.style.backgroundColor='#000'; this.style.transform='scale(1)';">
             Hover Me
         </button>
-        <div style="margin-top: 20px; display: flex; justify-content: center;">
-            <img src="images/InlineSS.jpg" alt="Image" style="max-width: 90%; height: auto;">
-        </div>
-    </main>
 
+        <!-- Image -->
+        <div style="margin-top: 30px; display: flex; justify-content: center;">
+            <img src="images/InlineSS.jpg" alt="Image" style="max-width: 90%; height: auto; border-radius: 10px;">
+        </div>
+
+    </section>
     <!-- Footer (Fixed at the bottom & Centered) -->
     <footer style="width: 100%; padding: 20px; display: flex; flex-direction: column; align-items: center;
                    justify-content: center; background-color: black; position: fixed; bottom: 0; left: 0; z-index: 2;
