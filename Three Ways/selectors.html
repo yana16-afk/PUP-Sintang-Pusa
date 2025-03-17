@@ -6,243 +6,588 @@
      <title>Selectors</title>
      <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
      <style>
-          *{
-               margin: 0px;
-               padding: 0px;
-               box-sizing: border-box;
-               font-family: 'Poppins', sans-serif;
-          }
+     /* ================================= */
+     /*            UNIVERSAL SELECTOR      */
+     /* ================================= */
 
-          .hero{
-               height: 100vh;
-               background-size: cover;
-               background-position: center;
-               background-repeat: no-repeat;
-               border-radius: 5px;
-          }
-          nav {
-               width: 100%;
-               padding: 30px;
-               display: flex;
-               justify-content: space-between;
-               align-items: center;
-               background-color: black;
-               position: relative;
-               top: 0;
-               left: 0;
-               z-index: 2;
-          }
-          .logo{
-               color:#fff;
-               font-size: 30px;
-               font-weight: bold;
-          }
-          .nav-links{
-               display: flex;
-               gap:30px;
-          }
-          .nav-links a{
-               color: #fff;
-               text-decoration: none;
-               transition: 0.3s;
-               font-size: 20px;
-          }
-          .nav-links a:hover{
-               color:#ccc;
-          }
+     /* Universal Selector - Applies styles to all elements */
+     * {
+          margin: 0; 
+          padding: 0; 
+          box-sizing: border-box; 
+          font-family: 'Poppins', sans-serif; 
+          color: #333; 
+     }
+
+     /* ================================= */
+     /*            TYPE SELECTORS          */
+     /* ================================= */
 
 
-          body {
-               padding: 20px;
-               background: #f5f5f5;
+     /* Type Selector - Applies a smooth gradient background */
+     body {
+          background: linear-gradient(-45deg, #e0e0e0, #d6d6d6, #bdbdbd);
+          background-size: 400% 400%;
+          animation: backgroundShift 10s infinite ease-in-out;
+          transition: background 0.5s ease-in-out;
+     }
+
+          /* Keyframes for animated background gradient */
+          @keyframes backgroundShift {
+               0% { background-position: 0% 50%; }
+               50% { background-position: 100% 50%; }
+               100% { background-position: 0% 50%; }
           }
 
-          header {
-               text-align: center;
-               margin-bottom: 20px;
+     /* Type Selector - Styles the body element */
+     body {
+          padding: 20px; 
+          background: linear-gradient(120deg, #f0f0f0, #d9d9d9);
+          transition: background 0.5s ease-in-out; 
+     }
+
+     /* Type Selector - Styles the navigation bar */
+     nav {
+          top: 0;
+          width: 100%; 
+          padding: 20px;
+          display: flex; 
+          justify-content: space-between;
+          align-items: center; 
+          background-color: black; 
+          position: fixed; 
+          left: 0;
+          z-index: 2; 
+     }
+
+     /* Type Selector - Styles the footer */
+     footer {
+          width: 100%;
+          padding: 20px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          background-color: black;
+          position: fixed;
+          bottom: 0;
+          left: 0;
+          z-index: 2;
+          color: white;
+     }
+
+     /* Type Selector - Styles sections inside the footer */
+     footer section {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+     }
+
+     /* Type Selector - Styles text inside the footer */
+     footer h2, p {
+          color: white;
+     }
+
+     /* Type Selector - Styles h1 inside .hero */
+     .hero h1 {
+          font-size: 50px;
+          color: #222;
+          margin-bottom: 20px;
+          text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+     }
+
+     /* Type Selector - Styles paragraph inside .hero */
+     .hero p {
+          font-size: 18px;
+          color: #444;
+          margin-bottom: 10px;
+     }
+
+     /* ================================= */
+     /*            CLASS SELECTORS        */
+     /* ================================= */
+
+     /* Class Selector - Main Hero Section */
+     .hero {
+          height: 50vh; /* Adjusted height */
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          background: linear-gradient(135deg, #f8f8f8, #e6e6e6); 
+          border-radius: 15px;
+          padding: 50px;
+          box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.1); 
+          border: 8px solid #ccc; 
+          position: relative;
+     }
+
+     /* Class Selector - Styles the content inside hero */
+     .hero .content {
+          background: rgba(255, 255, 255, 0.9);
+          padding: 20px;
+          border-radius: 10px;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+          text-align: center;
+          max-width: 600px;
+          transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+     }
+     /* Class Selector - Inner Hero Content */
+     .hero .content {
+          background: rgba(255, 255, 255, 0.95);
+          padding: 25px;
+          border-radius: 12px;
+          border: 5px solid #ddd;
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+          text-align: center;
+          max-width: 600px;
+          position: relative;
+          z-index: 1;
+     }
+     
+     /* Class Selector - Hero Title */
+     .hero h1 {
+          font-size: 45px;
+          font-weight: bold;
+          color: #333;
+          text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.15);
+          padding-bottom: 10px;
+          border-bottom: 4px dotted #888; 
+     }
+     
+     /* Class Selector - Decorative Header Background */
+     .hero .header-box {
+          background: #ddd;
+          padding: 15px;
+          border-radius: 8px;
+          border-bottom: 5px solid #aaa;
+          display: inline-block;
+          margin-top: 10px;
+     }
+
+     /* Class Selector - Soft, neutral accent lines */
+     .hero-divider {
+          width: 80%;
+          height: 5px;
+          background: linear-gradient(to right, #ccc, #888, #ccc);
+          border-radius: 3px;
+          margin: 15px auto;
+     }
+     
+     /* Class Selector - Cute Dot Dividers */
+     .hero-dots {
+          text-align: center;
+          font-size: 18px;
+          color: #999;
+          margin: 10px 0;
+     }
+     
+     /* Class Selector - Cute border effect */
+     .hero-border {
+          width: 90%;
+          height: 12px;
+          background: repeating-linear-gradient(
+          45deg,
+          #ddd,
+          #ddd 10px,
+          #bbb 10px,
+          #bbb 20px
+          ); /* Subtle striped effect */
+          border-radius: 10px;
+          margin: 20px auto;
+     }
+ 
+     /* Class Selector - Styles the showcase container */
+     .showcase-container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 40px;
+          max-width: 900px;
+          margin: auto;
+          padding: 80px 20px;
+     }
+
+     /* Class Selector - Title for each selector */
+     .selector-card h2 {
+          font-size: 22px;
+          font-weight: bold;
+          color: #222;
+          margin-bottom: 10px;
+          position: relative;
+     }
+
+     /* Class Selector - Styles the logo */
+     .logo {
+          color: white;
+          font-size: 30px;
+          font-weight: bold;
+     }
+
+     /* Class Selector - Styles each selector showcase section */
+     .selector-section {
+          background: white;
+          padding: 30px;
+          border-radius: 15px;
+          box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+          text-align: center;
+          max-width: 700px;
+          transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
           }
 
-          main {
-               width: 100%;
-               max-width: 1300px;
-               margin: 10px auto;
-               padding: 20px;
-               background: white;
-               border-radius: 10px;
-               box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-               text-align: center;
-          }
-          article {
-               border: 1px solid #ccc;
-               padding: 10px;
-               margin-bottom: 20px;
-               border-radius: 5px;
-               background: #f9f9f9;
-          }
+     
+     /* Class Selector - Adds hover effect to showcase sections */
+     .selector-section:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+          border-left: 8px solid #222; /* Darkens on hover */
+     }
 
-          pre {
-               background: #eee;
-               padding: 10px;
-               border-radius: 5px;
-               font-size: 14px;
-          }
+     /* Class Selector - Styles the title of each selector */
+     .selector-section h2 {
+          font-size: 28px;
+          font-weight: bold;
+          color: #222;
+          margin-bottom: 15px;
+          padding: 10px;
+          background: #bbb;
+          border-radius: 8px;
+          display: inline-block;
+     }
 
-          /* Universal Selector */
-          * {
-               color: #333;
-          }
+     /* Class Selector - Title for each selector */
+     .selector-card h2 {
+          font-size: 22px;
+          font-weight: bold;
+          color: #222;
+          margin-bottom: 10px;
+          position: relative;
+     }
 
-          /* Element Selector */
-          h2 {
-               color: blue;
-          }
+     /* Class Selector - Styles each individual selector card */
+     .selector-card {
+          background: white;
+          padding: 20px;
+          border-radius: 12px;
+          box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+          transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+          text-align: center;
+          position: relative;
+          overflow: hidden;
+     }
 
-          p {
-               font-size: 18px;
-          }
+     /* Class Selector - Decorative underline for section titles */
+     .selector-title-underline {
+          width: 50px;
+          height: 3px;
+          background: #444;
+          margin: 8px auto 0;
+     border-radius: 5px;
+ }
+ 
+      /* Class Selector - Styles each selector showcase section */
+      .selector-section {
+          background: white;
+          padding: 30px;
+          border-radius: 15px;
+          box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+          text-align: center;
+          max-width: 700px;
+          transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+          border-left: 8px solid #444; /* Decorative left border */
+     }
 
-          /* ID Selector */
-          #main-title {
-               background: yellow;
-               padding: 5px;
-               display: inline-block;
-          }
+     /* Class Selector - Adds hover effect to showcase sections */
+     .selector-section:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+          border-left: 8px solid #222; /* Darkens on hover */
+     }
 
-          /* Class Selector */
-          .highlight {
-               background: lightgreen;
-               padding: 5px;
-               border-radius: 5px;
-          }
+     /* Class Selector - Styles the title of each selector */
+     .selector-section h2 {
+          font-size: 28px;
+          font-weight: bold;
+          color: #222;
+          margin-bottom: 15px;
+          padding: 10px;
+          background: #bbb;
+          border-radius: 8px;
+          display: inline-block;
+     }
 
-          /* Grouping Selector */
-          h2, h3, h4 {
-               font-family: Arial, sans-serif;
-          }
+     /* Class Selector - Styles images inside sections */
+     .screenshot {
+          display: block;
+          margin: 20px auto;
+          max-width: 90%;
+          border: 5px solid #222;
+          border-radius: 15px;
+          box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+          transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+     }
 
-          /* Descendant Selector */
-          section p {
-               color: green;
-          }
+     /* Class Selector - Adds hover effect to images */
+     .screenshot:hover {
+          transform: scale(1.05);
+          box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+     }
 
-          /* Child Selector */
-          section > p {
-               font-weight: bold;
-          }
+     /* Class Selector - Decorative separator between sections */
+     .separator {
+          width: 100%;
+          height: 3px;
+          background: linear-gradient(to right, #ccc, #666, #ccc);
+          border-radius: 5px;
+          margin: 40px auto;
+     }
 
-          /* Adjacent Sibling Selector */
-          h2 + p {
-               color: red;
-          }
 
-          /* General Sibling Selector */
-          h2 ~ p {
-               text-decoration: underline;
-          }
+     /* Class Selector - Styles the navigation links */
+     .nav-links {
+          display: flex;
+          gap: 30px;
+     }
 
-          /* Attribute Selector */
-          input[type="text"] {
-               border: 2px solid blue;
-               padding: 5px;
-          }
+     /* Class Selector - Styles links inside .nav-links */
+     .nav-links a {
+          color: white;
+          text-decoration: none;
+          transition: 0.3s;
+          font-size: 20px;
+          padding: 8px 12px;
+          border-radius: 10px;
+     }
+
+     /* Class Selector - Controls the spacing and layout of each selector showcase section */
+     .selector-section {
+          margin: 40px auto;
+          padding-bottom: 50px; 
+     }
+
+     /* Class Selector - Styles the Screenshot Placeholder */
+     .screenshot {
+          display: block; 
+          margin: 20px auto;
+          max-width: 90%;
+          border: 5px solid #222; 
+          border-radius: 15px; 
+          box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); 
+          transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+     }
+
+     /* ================================= */
+     /*            ID SELECTORS           */
+     /* ================================= */
+
+     /* ID Selector - Styles copyright section */
+     #copyright {
+          background: white;
+          border-radius: 20px;
+          padding: 10px;
+          color: #333;
+     }
+
+     /* ================================= */
+     /*      DESCENDANT COMBINATORS       */
+     /* ================================= */
+
+     /* Descendant Combinator - Adds hover effect to .content inside .hero */
+     .hero .content:hover {
+          transform: scale(1.05);
+          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+     }
+
+     /* Descendant Combinator - Styles paragraph inside section inside .hero */
+     .hero section p {
+          font-size: 20px;
+          font-style: italic;
+          color: #666;
+          transition: color 0.3s ease-in-out;
+     }
+
+     /* Descendant Combinator - Changes text color when hovering over section */
+     .hero section:hover p {
+          color: #222;
+          font-weight: bold;
+     }
+
+     /* Descendant Combinator - Adds hover effect to nav links */
+     .nav-links a:hover {
+          background: #333;
+          color: white;
+          transform: scale(1.1);
+     }
+
+     /* Descendant Combinator - Styles h1 inside .hero .content */
+     .hero .content h1 {
+          font-size: 50px;
+          font-weight: bold;
+          color: #222;
+          text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+          transition: transform 0.3s ease-in-out;
+     }
+
+     /* Descendant Combinator - Rotates h1 on hover */
+     .hero .content h1:hover {
+          transform: rotate(-2deg) scale(1.1);
+     }
+
+     /* Descendant Combinator - Styling inside selector cards */
+     .selector-card p {
+     font-size: 16px;
+     color: #555;
+     line-height: 1.6;
+     }
+
+     /* Descendant Combinator - Styles p inside footer section */
+     footer section p {
+          font-style: italic;
+          font-size: 16px;
+          transition: color 0.3s ease-in-out;
+     }
+
+     /* Descendant Combinator - Changes footer text color on hover */
+     footer section:hover p {
+          color: #999;
+          font-weight: bold;
+     }
+
+     /* ================================= */
+     /*         PSEUDO-CLASSES            */
+     /* ================================= */
+ 
+     /* Pseudo-Class Selector - Enhances screenshot on hover */
+     .screenshot:hover {
+          transform: scale(1.05); /* Slightly enlarges the image */
+          box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5); /* Increases shadow intensity */
+     }
+
+     /* Pseudo-Class Selector - Changes link color on hover */
+     .nav-links a:hover {
+          color: #bbb;
+     }
+
+     /* Pseudo-Element Selector - Adds an effect after h2 inside .hero .content */
+     .hero .content h2::after {
+          content: "◼️";
+          font-size: 30px;
+          color: #666;
+          margin-left: 10px;
+          animation: fadeEffect 1s infinite alternate;
+     }
+
+     /* Pseudo-Class Selector - Enlarges section on hover */
+     .hero .content section:hover {
+          font-size: 40px;
+          color: #222;
+     }
+     
+     /* Pseudo-Class Selector - Hover effect for cards */
+     .selector-card:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+     }
+
+     .hero::before {
+          content: "";
+          position: absolute;
+          width: 80%;
+          height: 80%;
+          background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 10%, transparent 30%);
+          top: 10%;
+          left: 10%;
+          z-index: 0;
+          border-radius: 50%;
+     }
+
+     @keyframes fadeEffect {
+          0% { opacity: 1; }
+          100% { opacity: 0.5; }
+     }
+
+
      </style>
 </head>
 <body>
-     <div class="hero">
-          <nav>
-               <div class="logo">Selectors</div>
-               <div class="nav-links">
-                    <a href="Internal.html">Internal</a>
-                    <a href="external.html">External</a>
-                    <a href="inline.html">Inline</a>
-                    <a href="boxcomponents.html">Box Components</a>
-                    <a href="selectors.html">Selectors</a>
-               </div>
-          </nav>
-          <main>
-               <h1>SELECTORS</h1>
-               <!-- Universal Selector -->
-               <article>
-                    <h3>Universal Selector (*)</h3>
-                    <pre>* { color: #333; }</pre>
-                    <h1>UNIVERSAL</h1>
-                    <p>This text is affected by the universal selector.</p>
-                    <ul>
-                         <li>This list is affected by the universal selector.</li>
-                         <li>So is this one.</li>
-                         <li>And this one.</li>
-                    </ul>
-               </article>
-     
-               <!-- Element Selector -->
-               <article>
-                    <h3>Element Selector (h2)</h3>
-                    <pre>h2 { color: blue; }</pre>
-                    <h2>This heading is blue.</h2>
-                    <h1>This is not affected because of different hierarchy</h1>
-               </article>
-     
-               <!-- ID Selector -->
-               <article>
-                    <h3>ID Selector (#main-title)</h3>
-                    <pre>#main-title { background: yellow; }</pre>
-                    <h2 id="main-title">This heading has a yellow background.</h2>
-               </article>
-     
-               <!-- Class Selector -->
-               <article>
-                    <h3>Class Selector (.highlight)</h3>
-                    <pre>.highlight { background: lightgreen; }</pre>
-                    <p class="highlight">This paragraph has a green background.</p>
-               </article>
-     
-               <!-- Descendant Selector -->
-               <article>
-                    <h3>Descendant Selector (section p)</h3>
-                    <pre>section p { color: green; }</pre>
-                    <section>
-                         <p>This paragraph inside a section is green.</p>
-                    </section>
-               </article>
-     
-               <!-- Child Selector -->
-               <article>
-                    <h3>Child Selector (section > p)</h3>
-                    <pre>section > p { font-weight: bold; }</pre>
-                    <section>
-                         <p>This direct child paragraph is bold.</p>
-                         <aside>
-                              <p>This nested paragraph is NOT affected.</p>
-                         </aside>
-                    </section>
-               </article>
-     
-               <!-- Adjacent Sibling Selector -->
-               <article>
-                    <h3>Adjacent Sibling Selector (h2 + p)</h3>
-                    <pre>h2 + p { color: red; }</pre>
-                    <h2>Heading</h2>
-                    <p>This paragraph right after h2 is red.</p>
-                    <p>This paragraph is NOT affected.</p>
-               </article>
-     
-               <!-- General Sibling Selector -->
-               <article>
-                    <h3>General Sibling Selector (h2 ~ p)</h3>
-                    <pre>h2 ~ p { text-decoration: underline; }</pre>
-                    <h2>Heading</h2>
-                    <p>This paragraph after h2 is underlined.</p>
-                    <p>This one is also underlined.</p>
-               </article>
-     
-               <!-- Attribute Selector -->
-               <article>
-                    <h3>Attribute Selector (input[type="text"])</h3>
-                    <pre>input[type="text"] { border: 2px solid blue; }</pre>
-                    <input type="text" placeholder="This input has a blue border">
-               </article>
-          </main>
+    <nav>
+        <div class="logo">Selectors</div>
+        <div class="nav-links">
+            <a href="Internal.html">Internal</a>
+            <a href="external.html">External</a>
+            <a href="inline.html">Inline</a>
+            <a href="boxcomponents.html">Box Components</a>
+            <a href="selectors.html">Selectors</a>
+        </div>
+    </nav>
+
+    <div class="hero">
+          <div class="content">
+                   <!-- Decorative Border -->
+        <h1 id="welcome-text">CSS Selectors</h1>
+ 
+    </div>
+
+    <!-- Decorative Border -->
+    <div class="hero-border"></div>
+
+          </div>
      </div>
-     
+
+     <div class="showcase-container">
+
+          <!-- Universal Selector -->
+          <div class="selector-section">
+              <h2>Universal Selector (*)</h2>
+              <img src="images/UniversalSelectorSS.png" class="screenshot" alt="Universal Selector Screenshot">
+          </div>
+          <div class="separator"></div>
+      
+          <!-- Type Selector -->
+          <div class="selector-section">
+              <h2>Type Selector</h2>
+              <img src="images/TypeSelectorSS.png" class="screenshot" alt="Type Selector Screenshot">
+          </div>
+          <div class="separator"></div>
+      
+          <!-- Class Selector -->
+          <div class="selector-section">
+              <h2>Class Selector</h2>
+              <img src="images/ClassSelectorSS.png" class="screenshot" alt="Class Selector Screenshot">
+          </div>
+          <div class="separator"></div>
+      
+          <!-- ID Selector -->
+          <div class="selector-section">
+              <h2>ID Selector</h2>
+              <img src="images/IDSelectorSS.png" class="screenshot" alt="ID Selector Screenshot">
+          </div>
+          <div class="separator"></div>
+      
+          <!-- Descendant Combinator -->
+          <div class="selector-section">
+              <h2>Descendant Combinator</h2>
+              <img src="images/DescendantCombinatorSS.png" class="screenshot" alt="Descendant Combinator Screenshot">
+          </div>
+          <div class="separator"></div>
+      
+          <!-- Pseudo-Class Selector -->
+          <div class="selector-section">
+              <h2>Pseudo-Classes</h2>
+              <img src="images/PseudoClassesSS.png" class="screenshot" alt="Pseudo-Class Selector Screenshot">
+          </div>
+      
+      </div>
+      
+
+     <footer>
+        <section>
+            <h2>Contact Us</h2>
+            <p>Reach out to us for collaborations and inquiries.</p>
+            <input type="text" placeholder="Your email">
+        </section>
+        <p id="copyright">&copy; 2025 | Group 6 | BSCS 3-3</p>
+     </footer>
 </body>
 </html>

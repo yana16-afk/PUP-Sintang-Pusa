@@ -1,27 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Inline</title>
-     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-     <link rel="stylesheet" href="external.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
-<body>
-     <div class = "hero">
-          <nav>
-               <div class = "logo">Inline</div>
-               <div class="nav-links">
-                    <a href="internal.html">Internal</a>
-                    <a href="external.html">External</a>
-                    <a href="inline.html">Inline</a>
-                    <a href="boxcomponents.html">Box Components</a>
-                    <a href="selectors.html">Selectors</a>
+<body style="font-family: 'Poppins', sans-serif; margin: 0; padding: 0; box-sizing: border-box; text-align: center; background-color: #f4f4f4;">
+    <div style="height: 100vh; background-size: cover; background-position: center; background-repeat: no-repeat; border-radius: 5px;">
+        <nav style="width: 100%; padding: 30px; display: flex; justify-content: space-between; align-items: center; background-color: black; position: relative; top: 0; left: 0; z-index: 2;">
+            <div style="color: #fff; font-size: 30px; font-weight: bold;">Inline</div>
+            <div style="display: flex; gap: 30px;">
+                <a href="internal.html" style="color: #fff; text-decoration: none; transition: 0.3s; font-size: 20px;">Internal</a>
+                <a href="external.html" style="color: #fff; text-decoration: none; transition: 0.3s; font-size: 20px;">External</a>
+                <a href="inline.html" style="color: #fff; text-decoration: none; transition: 0.3s; font-size: 20px;">Inline</a>
+                <a href="boxcomponents.html" style="color: #fff; text-decoration: none; transition: 0.3s; font-size: 20px;">Box Components</a>
+                <a href="selectors.html" style="color: #fff; text-decoration: none; transition: 0.3s; font-size: 20px;">Selectors</a>
+            </div>
+        </nav>
+        <main style="width: 100%; max-width: 1300px; margin: 50px auto; background: rgb(185, 184, 184); padding: 30px; border-radius: 
+                    10px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); text-align: center;">
+            <div>
+                <h1 style="color: #000; font-size: 3em; margin-bottom: 20px; border: 2px; padding: 10px;">Inline CSS Style</h1>
+                <button style="padding: 15px 30px; font-size: 1em; color: #fff; background-color: #000; border: 2px; 
+                              cursor: pointer; transition: background-color 0.3s, transform 0.3s; border-radius: 20px;"
+                              onmouseover="this.style.backgroundColor='#767171'; this.style.transform='scale(1.1)';"
+                              onmouseout="this.style.backgroundColor='#000'; this.style.transform='scale(1)';"> Hover Me
+               </button>
+                <div style="margin-top: 20px; display: flex; justify-content: center;">
+                    <img src="images/InlineSS.jpg" alt="Image" style="max-width: 90%; height: auto;">
                 </div>
-          </nav>
-          <div class = "hero-content">
-          </div>
-     </div>
+            </div>
+        </main>
+    </div>
 </body>
-     
-     </html>
+</html>
