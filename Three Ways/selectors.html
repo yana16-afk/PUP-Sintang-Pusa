@@ -3,246 +3,200 @@
 <head>
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Selectors</title>
+     <title>Welcome</title>
      <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
      <style>
+          /* Universal Selector */
           *{
-               margin: 0px;
-               padding: 0px;
+               margin: 0;
+               padding: 0;
                box-sizing: border-box;
                font-family: 'Poppins', sans-serif;
+               color: #333;
           }
 
-          .hero{
-               height: 100vh;
-               background-size: cover;
-               background-position: center;
-               background-repeat: no-repeat;
-               border-radius: 5px;
-          }
-          nav {
-               width: 100%;
-               padding: 30px;
-               display: flex;
-               justify-content: space-between;
-               align-items: center;
-               background-color: black;
-               position: relative;
-               top: 0;
-               left: 0;
-               z-index: 2;
-          }
-          .logo{
-               color:#fff;
-               font-size: 30px;
-               font-weight: bold;
-          }
-          .nav-links{
-               display: flex;
-               gap:30px;
-          }
-          .nav-links a{
-               color: #fff;
-               text-decoration: none;
-               transition: 0.3s;
-               font-size: 20px;
-          }
-          .nav-links a:hover{
-               color:#ccc;
-          }
-
-
+          /* Type Selector */
           body {
                padding: 20px;
                background: #f5f5f5;
           }
 
-          header {
+          /* Class Selector */
+          .hero {
+               height: 100vh;
+               display: flex;
+               flex-direction: column;
+               align-items: center;
+               justify-content: center;
                text-align: center;
-               margin-bottom: 20px;
-          }
-
-          main {
-               width: 100%;
-               max-width: 1300px;
-               margin: 10px auto;
-               padding: 20px;
-               background: white;
-               border-radius: 10px;
-               box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-               text-align: center;
-          }
-          article {
-               border: 1px solid #ccc;
-               padding: 10px;
-               margin-bottom: 20px;
+               background: url('background.jpg') no-repeat center center/cover;
                border-radius: 5px;
-               background: #f9f9f9;
-          }
-
-          pre {
-               background: #eee;
-               padding: 10px;
-               border-radius: 5px;
-               font-size: 14px;
-          }
-
-          /* Universal Selector */
-          * {
-               color: #333;
-          }
-
-          /* Element Selector */
-          h2 {
-               color: blue;
-          }
-
-          p {
-               font-size: 18px;
-          }
-
-          /* ID Selector */
-          #main-title {
-               background: yellow;
-               padding: 5px;
-               display: inline-block;
+               padding: 50px;
           }
 
           /* Class Selector */
-          .highlight {
-               background: lightgreen;
-               padding: 5px;
-               border-radius: 5px;
+          .hero .content {
+               background: rgba(255, 255, 255, 0.9);
+               padding: 30px;
+               border-radius: 10px;
+               box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+               text-align: center;
+               max-width: 600px;
           }
 
-          /* Grouping Selector */
-          h2, h3, h4 {
-               font-family: Arial, sans-serif;
+          /* Element Selector */
+          .hero h1 {
+               font-size: 50px;
+               color: #333;
+               margin-bottom: 20px;
           }
 
-          /* Descendant Selector */
-          section p {
-               color: green;
+          /* Element Selector */
+          .hero p {
+               font-size: 18px;
+               color: #333;
+               margin-bottom: 10px;
+          }
+          
+          /* Class Selector */
+          .hero section{
+                padding: 20px;
           }
 
-          /* Child Selector */
-          section > p {
+          /* Type Selector */
+          nav {
+               width: 100%;
+               padding: 20px;
+               display: flex;
+               justify-content: space-between;
+               align-items: center;
+               background-color: black;
+               position: fixed;
+               top: 0;
+               left: 0;
+               z-index: 2;
+          }
+
+          /* Type Selector */
+          footer {
+               width: 100%;
+               padding: 20px;
+               display: flex;
+               justify-content: space-between;
+               align-items: center;
+               background-color: black;
+               position: fixed;
+               bottom: 0;
+               left: 0;
+               z-index: 2;
+               color: white;
+          }
+
+          /* Class Selector */
+          .logo {
+               color: white;
+               font-size: 30px;
                font-weight: bold;
           }
 
-          /* Adjacent Sibling Selector */
-          h2 + p {
-               color: red;
+          /* Class Selector */
+          .nav-links {
+               display: flex;
+               gap: 30px;
           }
 
-          /* General Sibling Selector */
-          h2 ~ p {
-               text-decoration: underline;
+          /* Class Selector */
+          .nav-links a {
+               color: white;
+               text-decoration: none;
+               transition: 0.3s;
+               font-size: 20px;
+          }
+
+          /* Pseudo-Class Selector */
+          .nav-links a:hover {
+               color: #ccc;
+          }
+
+          /* Type Selector */
+          footer section {
+               display: flex;
+               align-items: center;
+               gap: 10px;
+          }
+
+          /* Grouped Type Selector */
+          footer h2, p {
+               color: white;
+          }
+
+          /* ID Selector */
+          #copyright{
+                background: white;
+                border-radius:20px;
+                padding:10px;
+                color: #333;
           }
 
           /* Attribute Selector */
-          input[type="text"] {
-               border: 2px solid blue;
+          footer input[type="text"] {
+               border: 1px solid white;
                padding: 5px;
+               color: black;
           }
+
+          .hero .content h2::after{
+                content: "✨";
+                font-size: 30px;
+                color: #333;
+          }
+          
+          .hero .content section:hover{
+                font-size: 40px;
+                color: #333;
+          }
+
      </style>
 </head>
 <body>
+    <nav>
+        <div class="logo">Group 6</div>
+        <div class="nav-links">
+            <a href="Internal.html">Internal</a>
+            <a href="external.html">External</a>
+            <a href="inline.html">Inline</a>
+            <a href="boxcomponents.html">Box Components</a>
+            <a href="selectors.html">Selectors</a>
+        </div>
+    </nav>
+
      <div class="hero">
-          <nav>
-               <div class="logo">Selectors</div>
-               <div class="nav-links">
-                    <a href="Internal.html">Internal</a>
-                    <a href="external.html">External</a>
-                    <a href="inline.html">Inline</a>
-                    <a href="boxcomponents.html">Box Components</a>
-                    <a href="selectors.html">Selectors</a>
-               </div>
-          </nav>
-          <main>
-               <h1>SELECTORS</h1>
-               <!-- Universal Selector -->
-               <article>
-                    <h3>Universal Selector (*)</h3>
-                    <pre>* { color: #333; }</pre>
-                    <h1>UNIVERSAL</h1>
-                    <p>This text is affected by the universal selector.</p>
-                    <ul>
-                         <li>This list is affected by the universal selector.</li>
-                         <li>So is this one.</li>
-                         <li>And this one.</li>
-                    </ul>
-               </article>
-     
-               <!-- Element Selector -->
-               <article>
-                    <h3>Element Selector (h2)</h3>
-                    <pre>h2 { color: blue; }</pre>
-                    <h2>This heading is blue.</h2>
-                    <h1>This is not affected because of different hierarchy</h1>
-               </article>
-     
-               <!-- ID Selector -->
-               <article>
-                    <h3>ID Selector (#main-title)</h3>
-                    <pre>#main-title { background: yellow; }</pre>
-                    <h2 id="main-title">This heading has a yellow background.</h2>
-               </article>
-     
-               <!-- Class Selector -->
-               <article>
-                    <h3>Class Selector (.highlight)</h3>
-                    <pre>.highlight { background: lightgreen; }</pre>
-                    <p class="highlight">This paragraph has a green background.</p>
-               </article>
-     
-               <!-- Descendant Selector -->
-               <article>
-                    <h3>Descendant Selector (section p)</h3>
-                    <pre>section p { color: green; }</pre>
-                    <section>
-                         <p>This paragraph inside a section is green.</p>
-                    </section>
-               </article>
-     
-               <!-- Child Selector -->
-               <article>
-                    <h3>Child Selector (section > p)</h3>
-                    <pre>section > p { font-weight: bold; }</pre>
-                    <section>
-                         <p>This direct child paragraph is bold.</p>
-                         <aside>
-                              <p>This nested paragraph is NOT affected.</p>
-                         </aside>
-                    </section>
-               </article>
-     
-               <!-- Adjacent Sibling Selector -->
-               <article>
-                    <h3>Adjacent Sibling Selector (h2 + p)</h3>
-                    <pre>h2 + p { color: red; }</pre>
-                    <h2>Heading</h2>
-                    <p>This paragraph right after h2 is red.</p>
-                    <p>This paragraph is NOT affected.</p>
-               </article>
-     
-               <!-- General Sibling Selector -->
-               <article>
-                    <h3>General Sibling Selector (h2 ~ p)</h3>
-                    <pre>h2 ~ p { text-decoration: underline; }</pre>
-                    <h2>Heading</h2>
-                    <p>This paragraph after h2 is underlined.</p>
-                    <p>This one is also underlined.</p>
-               </article>
-     
-               <!-- Attribute Selector -->
-               <article>
-                    <h3>Attribute Selector (input[type="text"])</h3>
-                    <pre>input[type="text"] { border: 2px solid blue; }</pre>
-                    <input type="text" placeholder="This input has a blue border">
-               </article>
-          </main>
+          <div class="content">
+               <h1 id="welcome-text">Welcome to Our Site!</h1>
+               <p class="highlight">Made by Group 6</p>
+               <main>
+                <section>
+                     <h2>About Us</h2>
+                     <p>(palagay ng kung ano)</p>
+                </section>
+      
+                <section>
+                     <h2>Our Services</h2>
+                     <p>We offer web development, graphic design, and software solutions. (eme lang to)</p>
+                     <p>Customer satisfaction is our priority.</p>
+                </section>
+                
+            </main>
+          </div>
      </div>
-     
+
+     <footer>
+        <section>
+            <h2>Contact Us</h2>
+            <p>Reach out to us for collaborations and inquiries.</p>
+            <input type="text" placeholder="Your email">
+        </section>
+        <p id="copyright">&copy; 2021 Group 6</p>
+     </footer>
 </body>
 </html>
