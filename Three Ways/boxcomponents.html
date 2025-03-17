@@ -18,11 +18,13 @@
                background-size: cover;
                background-position: center;
                background-repeat: no-repeat;
-               border-radius: 5px;
+               border-radius: 15px;
+               padding: 30px 40px;
           }
+
           nav {
                width: 100%;
-               padding: 30px;
+               padding: 25px 60px;
                display: flex;
                justify-content: space-between;
                align-items: center;
@@ -31,24 +33,44 @@
                top: 0;
                left: 0;
                z-index: 2;
+               border-radius: 18px;
+               box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+               margin-bottom: 40px;
+               border: 1px solid rgba(255, 255, 255, 0.1);
           }
+
           .logo{
-               color:#fff;
-               font-size: 30px;
+               color: #fff;
+               font-size: 32px;
                font-weight: bold;
+               letter-spacing: 1px;
+               padding: 8px 16px;
+               border-left: 4px solid #fff;
+               margin-left: 10px;
           }
+
           .nav-links{
                display: flex;
-               gap:30px;
+               gap: 45px;
+               margin-right: 10px;
           }
+
           .nav-links a{
                color: #fff;
                text-decoration: none;
                transition: 0.3s;
                font-size: 20px;
+               padding: 12px 20px;
+               border-radius: 10px;
+               border: 1px solid transparent;
           }
+
           .nav-links a:hover{
-               color:#ccc;
+               color:#fff;
+               background-color: rgba(255, 255, 255, 0.15);
+               border-radius: 10px;
+               border: 1px solid rgba(255, 255, 255, 0.3);
+               box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
           }
 
           main {
@@ -106,51 +128,6 @@
                border: 5px solid #fff;
                margin: 0 auto;
           }
-          /* Type Selector - Styles the footer */
-          footer {
-               width: 100%;
-               padding: 20px;
-               display: flex;
-               justify-content: space-between;
-               align-items: center;
-               background-color: black;
-               position: fixed;
-               bottom: 0;
-               left: 0;
-               z-index: 2;
-               color: white;
-          }
-
-          /* Type Selector - Styles sections inside the footer */
-          footer section {
-               display: flex;
-               align-items: center;
-               gap: 10px;
-          }
-
-          /* Type Selector - Styles text inside the footer */
-          footer h2, p {
-               color: white;
-          }
-          /* Descendant Combinator - Styles p inside footer section */
-          footer section p {
-               font-style: italic;
-               font-size: 16px;
-               transition: color 0.3s ease-in-out;
-          }
-
-          /* Descendant Combinator - Changes footer text color on hover */
-          footer section:hover p {
-               color: #999;
-               font-weight: bold;
-          }
-
-          #copyright {
-               background: white;
-               border-radius: 20px;
-               padding: 10px;
-               color: #333;
-          }
      </style>
 </head>
 <body>
@@ -176,12 +153,4 @@
           </main>
      </div>
 </body>
-<footer>
-     <section>
-         <h2>Contact Us</h2>
-         <p>Reach out to us for collaborations and inquiries.</p>
-         <input type="text" placeholder="Your email">
-     </section>
-     <p id="copyright">&copy; 2025 | Group 6 | BSCS 3-3</p>
- </footer>
 </html>
